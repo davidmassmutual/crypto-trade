@@ -29,9 +29,9 @@
   --border-highlight: rgba(0, 210, 255, 0.3);
   
   /* Shadows */
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  --soft-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  --glow: 0 0 20px rgba(0, 210, 255, 0.2);
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  --soft-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --glow: 0 0 10px rgba(0, 210, 255, 0.1);
   
   /* Typography */
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -96,6 +96,13 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Ensure all elements respect container width */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Typography Enhancements */
@@ -133,6 +140,19 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-lg);
+}
+
+/* Mobile padding improvements */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
 }
 
 /* Buttons */

@@ -274,13 +274,14 @@
 }
 
 @media (max-width: 768px) {
-  .login {
-    padding: 1rem;
-  }
-  
-  .login-container {
-    padding: 2rem 1rem;
-  }
+.login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 100%);
+  padding: 2rem;
+}
   
   .login-title {
     font-size: 2rem;

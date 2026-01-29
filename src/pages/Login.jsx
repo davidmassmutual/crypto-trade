@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../pages/Login.css'
 
 const Login = () => {
@@ -6,6 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -16,7 +18,7 @@ const Login = () => {
     setTimeout(() => {
       if (email === 'demo@example.com' && password === 'demo123') {
         alert('Login successful!')
-        // In a real app, you would redirect to dashboard
+        navigate('/dashboard')
       } else {
         setError('Invalid email or password')
       }
